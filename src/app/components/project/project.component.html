@@ -1,0 +1,30 @@
+<section class="animated fadeIn fast">
+    <h1>{{project.nombre | uppercase}} <small>Fecha de creación: {{project.aparicion | date:'y'}}</small></h1>
+    <hr>
+    <div>
+        <div class="row">
+            <div class="col-md-4">
+                <img [src]='project.img' class="img-fluid" [alt]='project.nombre'>
+                <br><br>
+                <div class="d-grid gap-2">
+                    <a [routerLink]="['/projects']" class="btn btn-outline-danger btn-block">Regresar</a>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <h3>{{project.nombre}}</h3>
+                <hr>
+                <p>
+                    {{project.bio}}
+                </p>
+                <div>
+                    <img *ngIf="project.casa == 'Marvel'" class="img-logo" src="assets/img/hulk.png" alt='Marvel'>
+                    <img *ngIf="project.casa == 'DC'" class="img-logo" src="assets/img/aquaman.png" alt='DC'>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>

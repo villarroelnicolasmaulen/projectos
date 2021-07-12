@@ -1,0 +1,12 @@
+
+<h3 class="animated fadeIn">He Realizado</h3>
+<hr>
+<div class="card-group ">
+
+  <!-- *ngFor="let project of projects; let i = index  -->
+  <div class="row">
+    <app-project-tarjeta class="col-3" (projectSeleccionado)='verProject($event)' [project]="project" [index]='i' *ngFor="let project of projects; let i = index" >
+    </app-project-tarjeta>
+  </div>
+
+</div>
